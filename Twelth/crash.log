@@ -1,0 +1,130 @@
+2023-11-25T20:36:26.264+0530 [INFO]  Terraform version: 1.5.5
+2023-11-25T20:36:26.265+0530 [DEBUG] using github.com/hashicorp/go-tfe v1.26.0
+2023-11-25T20:36:26.265+0530 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.2
+2023-11-25T20:36:26.265+0530 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.0
+2023-11-25T20:36:26.265+0530 [DEBUG] using github.com/zclconf/go-cty v1.12.2
+2023-11-25T20:36:26.265+0530 [INFO]  Go runtime version: go1.20.7
+2023-11-25T20:36:26.265+0530 [INFO]  CLI args: []string{"C:\\Program Files\\tmp\\terraform.exe", "plan"}
+2023-11-25T20:36:26.272+0530 [DEBUG] Attempting to open CLI config file: C:\Users\Admin\AppData\Roaming\terraform.rc
+2023-11-25T20:36:26.272+0530 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-25T20:36:26.274+0530 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-25T20:36:26.274+0530 [DEBUG] ignoring non-existing provider search directory C:\Users\Admin\AppData\Roaming\terraform.d\plugins
+2023-11-25T20:36:26.275+0530 [DEBUG] ignoring non-existing provider search directory C:\Users\Admin\AppData\Roaming\HashiCorp\Terraform\plugins
+2023-11-25T20:36:26.276+0530 [INFO]  CLI command args: []string{"plan"}
+2023-11-25T20:36:26.278+0530 [DEBUG] New state was assigned lineage "c2dca768-faf6-c315-5189-4de6791d782b"
+2023-11-25T20:36:28.927+0530 [DEBUG] checking for provisioner in "."
+2023-11-25T20:36:28.927+0530 [DEBUG] checking for provisioner in "C:\\Program Files\\tmp"
+2023-11-25T20:36:28.929+0530 [INFO]  backend/local: starting Plan operation
+2023-11-25T20:36:28.941+0530 [DEBUG] created provider logger: level=debug
+2023-11-25T20:36:28.942+0530 [INFO]  provider: configuring client automatic mTLS
+2023-11-25T20:36:29.126+0530 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe args=[.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe]
+2023-11-25T20:36:29.132+0530 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe pid=19236
+2023-11-25T20:36:29.132+0530 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe
+2023-11-25T20:36:29.304+0530 [INFO]  provider.terraform-provider-aws_v5.26.0_x5.exe: configuring server automatic mTLS: timestamp=2023-11-25T20:36:29.303+0530
+2023-11-25T20:36:29.482+0530 [DEBUG] provider: using plugin: version=5
+2023-11-25T20:36:29.483+0530 [DEBUG] provider.terraform-provider-aws_v5.26.0_x5.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2023-11-25T20:36:29.482+0530
+2023-11-25T20:36:30.870+0530 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-25T20:36:30.895+0530 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe pid=19236
+2023-11-25T20:36:30.895+0530 [DEBUG] provider: plugin exited
+2023-11-25T20:36:30.895+0530 [DEBUG] Building and walking validate graph
+2023-11-25T20:36:30.896+0530 [DEBUG] ProviderTransformer: "aws_security_group.mynewTLS" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-11-25T20:36:30.896+0530 [DEBUG] ProviderTransformer: "aws_eip.lb" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-11-25T20:36:30.896+0530 [DEBUG] ProviderTransformer: "aws_eip.lb2" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-11-25T20:36:30.896+0530 [DEBUG] ReferenceTransformer: "aws_eip.lb2" references: []
+2023-11-25T20:36:30.896+0530 [DEBUG] ReferenceTransformer: "aws_security_group.mynewTLS" references: [aws_eip.lb]
+2023-11-25T20:36:30.896+0530 [DEBUG] ReferenceTransformer: "output.public_ip (expand)" references: [aws_eip.lb]
+2023-11-25T20:36:30.896+0530 [DEBUG] ReferenceTransformer: "output.public_ip2 (expand)" references: [aws_eip.lb2]
+2023-11-25T20:36:30.896+0530 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2023-11-25T20:36:30.896+0530 [DEBUG] ReferenceTransformer: "aws_eip.lb" references: []
+2023-11-25T20:36:30.897+0530 [DEBUG] Starting graph walk: walkValidate
+2023-11-25T20:36:30.898+0530 [DEBUG] created provider logger: level=debug
+2023-11-25T20:36:30.898+0530 [INFO]  provider: configuring client automatic mTLS
+2023-11-25T20:36:30.966+0530 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe args=[.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe]
+2023-11-25T20:36:30.970+0530 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe pid=17688
+2023-11-25T20:36:30.970+0530 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe
+2023-11-25T20:36:31.146+0530 [INFO]  provider.terraform-provider-aws_v5.26.0_x5.exe: configuring server automatic mTLS: timestamp=2023-11-25T20:36:31.143+0530
+2023-11-25T20:36:31.314+0530 [DEBUG] provider.terraform-provider-aws_v5.26.0_x5.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2023-11-25T20:36:31.314+0530
+2023-11-25T20:36:31.314+0530 [DEBUG] provider: using plugin: version=5
+2023-11-25T20:36:32.629+0530 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-25T20:36:32.656+0530 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe pid=17688
+2023-11-25T20:36:32.656+0530 [DEBUG] provider: plugin exited
+2023-11-25T20:36:32.656+0530 [INFO]  backend/local: plan calling Plan
+2023-11-25T20:36:32.656+0530 [DEBUG] Building and walking plan graph for NormalMode
+2023-11-25T20:36:32.657+0530 [DEBUG] ProviderTransformer: "aws_eip.lb2 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-11-25T20:36:32.657+0530 [DEBUG] ProviderTransformer: "aws_security_group.mynewTLS (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-11-25T20:36:32.657+0530 [DEBUG] ProviderTransformer: "aws_eip.lb (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-11-25T20:36:32.657+0530 [DEBUG] ReferenceTransformer: "aws_security_group.mynewTLS (expand)" references: [aws_eip.lb (expand)]
+2023-11-25T20:36:32.657+0530 [DEBUG] ReferenceTransformer: "output.public_ip (expand)" references: [aws_eip.lb (expand)]
+2023-11-25T20:36:32.657+0530 [DEBUG] ReferenceTransformer: "output.public_ip2 (expand)" references: [aws_eip.lb2 (expand)]
+2023-11-25T20:36:32.657+0530 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2023-11-25T20:36:32.657+0530 [DEBUG] ReferenceTransformer: "aws_eip.lb (expand)" references: []
+2023-11-25T20:36:32.657+0530 [DEBUG] ReferenceTransformer: "aws_eip.lb2 (expand)" references: []
+2023-11-25T20:36:32.658+0530 [DEBUG] Starting graph walk: walkPlan
+2023-11-25T20:36:32.659+0530 [DEBUG] created provider logger: level=debug
+2023-11-25T20:36:32.659+0530 [INFO]  provider: configuring client automatic mTLS
+2023-11-25T20:36:32.728+0530 [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe args=[.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe]
+2023-11-25T20:36:32.733+0530 [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe pid=22300
+2023-11-25T20:36:32.733+0530 [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe
+2023-11-25T20:36:32.893+0530 [INFO]  provider.terraform-provider-aws_v5.26.0_x5.exe: configuring server automatic mTLS: timestamp=2023-11-25T20:36:32.892+0530
+2023-11-25T20:36:33.111+0530 [DEBUG] provider: using plugin: version=5
+2023-11-25T20:36:33.111+0530 [DEBUG] provider.terraform-provider-aws_v5.26.0_x5.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2023-11-25T20:36:33.111+0530
+2023-11-25T20:36:34.366+0530 [DEBUG] provider.terraform-provider-aws_v5.26.0_x5.exe: Configuring Terraform AWS Provider: tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=3083fdf1-2bf7-aac1-a8e8-8667d66bf60a tf_rpc=ConfigureProvider @caller=github.com/hashicorp/terraform-provider-aws/internal/conns/config.go:131 @module=aws timestamp=2023-11-25T20:36:34.365+0530
+2023-11-25T20:36:34.366+0530 [DEBUG] provider.terraform-provider-aws_v5.26.0_x5.exe: Resolving credentials provider: tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=3083fdf1-2bf7-aac1-a8e8-8667d66bf60a @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.41/logging/tf_logger.go:47 @module=aws.aws-base tf_rpc=ConfigureProvider timestamp=2023-11-25T20:36:34.366+0530
+2023-11-25T20:36:34.366+0530 [DEBUG] provider.terraform-provider-aws_v5.26.0_x5.exe: Loading configuration: tf_mux_provider=*schema.GRPCProviderServer @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.41/logging/tf_logger.go:47 @module=aws.aws-base tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=3083fdf1-2bf7-aac1-a8e8-8667d66bf60a tf_rpc=ConfigureProvider timestamp=2023-11-25T20:36:34.366+0530
+2023-11-25T20:36:34.366+0530 [DEBUG] provider.terraform-provider-aws_v5.26.0_x5.exe: Retrieving credentials: tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=3083fdf1-2bf7-aac1-a8e8-8667d66bf60a @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.41/logging/tf_logger.go:47 @module=aws.aws-base tf_rpc=ConfigureProvider timestamp=2023-11-25T20:36:34.366+0530
+2023-11-25T20:36:34.366+0530 [INFO]  provider.terraform-provider-aws_v5.26.0_x5.exe: Retrieved credentials: tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=3083fdf1-2bf7-aac1-a8e8-8667d66bf60a tf_rpc=ConfigureProvider @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.41/logging/tf_logger.go:39 @module=aws.aws-base tf_aws.credentials_source="SharedConfigCredentials: C:\Users\Admin\.aws\credentials" tf_mux_provider=*schema.GRPCProviderServer timestamp=2023-11-25T20:36:34.366+0530
+2023-11-25T20:36:34.366+0530 [DEBUG] provider.terraform-provider-aws_v5.26.0_x5.exe: Loading configuration: tf_rpc=ConfigureProvider @module=aws.aws-base tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.41/logging/tf_logger.go:47 tf_mux_provider=*schema.GRPCProviderServer tf_req_id=3083fdf1-2bf7-aac1-a8e8-8667d66bf60a timestamp=2023-11-25T20:36:34.366+0530
+2023-11-25T20:36:34.367+0530 [DEBUG] provider.terraform-provider-aws_v5.26.0_x5.exe: Creating AWS SDK v1 session: @caller=github.com/hashicorp/terraform-provider-aws/internal/conns/config.go:155 tf_mux_provider=*schema.GRPCProviderServer @module=aws tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=3083fdf1-2bf7-aac1-a8e8-8667d66bf60a tf_rpc=ConfigureProvider timestamp=2023-11-25T20:36:34.367+0530
+2023-11-25T20:36:34.367+0530 [DEBUG] provider.terraform-provider-aws_v5.26.0_x5.exe: Retrieving AWS account details: tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=3083fdf1-2bf7-aac1-a8e8-8667d66bf60a tf_rpc=ConfigureProvider @caller=github.com/hashicorp/terraform-provider-aws/internal/conns/config.go:170 @module=aws timestamp=2023-11-25T20:36:34.367+0530
+2023-11-25T20:36:34.367+0530 [DEBUG] provider.terraform-provider-aws_v5.26.0_x5.exe: Retrieving caller identity from STS: tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ConfigureProvider tf_req_id=3083fdf1-2bf7-aac1-a8e8-8667d66bf60a @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.41/logging/tf_logger.go:47 @module=aws.aws-base timestamp=2023-11-25T20:36:34.367+0530
+2023-11-25T20:36:34.369+0530 [DEBUG] provider.terraform-provider-aws_v5.26.0_x5.exe: HTTP Request Sent: http.request.body="Action=GetCallerIdentity&Version=2011-06-15
+" tf_mux_provider=*schema.GRPCProviderServer tf_rpc=ConfigureProvider @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.41/logging/tf_logger.go:47 @module=aws.aws-base aws.region=ap-south-1 rpc.system=aws-api tf_req_id=3083fdf1-2bf7-aac1-a8e8-8667d66bf60a http.request.header.amz_sdk_invocation_id=c191f954-6dd0-49ac-9112-298fd36fd0e5 http.url=https://sts.ap-south-1.amazonaws.com/ rpc.method=GetCallerIdentity rpc.service=STS http.method=POST http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************DRYZ/20231125/ap-south-1/sts/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-request;content-length;content-type;host;x-amz-date, Signature=*****" http.request.header.content_type=application/x-www-form-urlencoded http.request_content_length=43 net.peer.name=sts.ap-south-1.amazonaws.com tf_aws.sdk=aws-sdk-go-v2 tf_provider_addr=registry.terraform.io/hashicorp/aws http.request.header.amz_sdk_request="attempt=1; max=25" http.request.header.x_amz_date=20231125T150634Z http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.5.5 (+https://www.terraform.io) terraform-provider-aws/5.26.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.22.2 os/windows lang/go#1.20.10 md/GOOS#windows md/GOARCH#386 api/sts#1.25.1" timestamp=2023-11-25T20:36:34.368+0530
+2023-11-25T20:36:34.490+0530 [DEBUG] provider.terraform-provider-aws_v5.26.0_x5.exe: HTTP Response Received: http.duration=120 rpc.service=STS tf_req_id=3083fdf1-2bf7-aac1-a8e8-8667d66bf60a @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.41/logging/tf_logger.go:47 aws.region=ap-south-1 @module=aws.aws-base http.response.body="<GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+  <GetCallerIdentityResult>
+    <Arn>arn:aws:iam::154167517476:user/puru</Arn>
+    <UserId>AIDA*************Z6LE</UserId>
+    <Account>154167517476</Account>
+  </GetCallerIdentityResult>
+  <ResponseMetadata>
+    <RequestId>9ba6bf82-4aeb-485d-abd8-67caccf1cf00</RequestId>
+  </ResponseMetadata>
+</GetCallerIdentityResponse>
+" http.response.header.date="Sat, 25 Nov 2023 15:06:34 GMT" http.response_content_length=401 tf_rpc=ConfigureProvider http.response.header.x_amzn_requestid=9ba6bf82-4aeb-485d-abd8-67caccf1cf00 rpc.method=GetCallerIdentity rpc.system=aws-api tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws http.response.header.content_type=text/xml http.status_code=200 tf_aws.sdk=aws-sdk-go-v2 timestamp=2023-11-25T20:36:34.489+0530
+2023-11-25T20:36:34.490+0530 [INFO]  provider.terraform-provider-aws_v5.26.0_x5.exe: Retrieved caller identity from STS: tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/aws-sdk-go-base/v2@v2.0.0-beta.41/logging/tf_logger.go:39 @module=aws.aws-base tf_mux_provider=*schema.GRPCProviderServer tf_req_id=3083fdf1-2bf7-aac1-a8e8-8667d66bf60a tf_rpc=ConfigureProvider timestamp=2023-11-25T20:36:34.490+0530
+2023-11-25T20:36:34.494+0530 [DEBUG] Resource instance state not found for node "aws_eip.lb", instance aws_eip.lb
+2023-11-25T20:36:34.494+0530 [DEBUG] ReferenceTransformer: "aws_eip.lb" references: []
+2023-11-25T20:36:34.495+0530 [DEBUG] Resource instance state not found for node "aws_eip.lb2", instance aws_eip.lb2
+2023-11-25T20:36:34.495+0530 [DEBUG] ReferenceTransformer: "aws_eip.lb2" references: []
+2023-11-25T20:36:34.495+0530 [DEBUG] refresh: aws_eip.lb: no state, so not refreshing
+2023-11-25T20:36:34.496+0530 [DEBUG] refresh: aws_eip.lb2: no state, so not refreshing
+2023-11-25T20:36:34.508+0530 [DEBUG] Resource instance state not found for node "aws_security_group.mynewTLS", instance aws_security_group.mynewTLS
+2023-11-25T20:36:34.509+0530 [DEBUG] ReferenceTransformer: "aws_security_group.mynewTLS" references: []
+2023-11-25T20:36:34.509+0530 [DEBUG] refresh: aws_security_group.mynewTLS: no state, so not refreshing
+2023-11-25T20:36:34.525+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.mynewTLS, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .revoke_rules_on_delete: planned value cty.False for a non-computed attribute
+      - .egress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("-1"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(0)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("-1"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(0)})})
+      - .ingress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.UnknownVal(cty.List(cty.String)), "description":cty.StringVal("allow ssh from specific ips"), "from_port":cty.NumberIntVal(22), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(22)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.UnknownVal(cty.String)}), "description":cty.StringVal("allow ssh from specific ips"), "from_port":cty.NumberIntVal(22), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(22)})})
+2023-11-25T20:36:34.528+0530 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-11-25T20:36:34.580+0530 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.26.0/windows_386/terraform-provider-aws_v5.26.0_x5.exe pid=22300
+2023-11-25T20:36:34.580+0530 [DEBUG] provider: plugin exited
+2023-11-25T20:36:34.581+0530 [DEBUG] building apply graph to check for errors
+2023-11-25T20:36:34.582+0530 [DEBUG] Resource state not found for node "aws_eip.lb2", instance aws_eip.lb2
+2023-11-25T20:36:34.582+0530 [DEBUG] Resource state not found for node "aws_eip.lb", instance aws_eip.lb
+2023-11-25T20:36:34.582+0530 [DEBUG] Resource state not found for node "aws_security_group.mynewTLS", instance aws_security_group.mynewTLS
+2023-11-25T20:36:34.583+0530 [DEBUG] ProviderTransformer: "aws_security_group.mynewTLS" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-11-25T20:36:34.583+0530 [DEBUG] ProviderTransformer: "aws_eip.lb (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-11-25T20:36:34.583+0530 [DEBUG] ProviderTransformer: "aws_security_group.mynewTLS (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-11-25T20:36:34.583+0530 [DEBUG] ProviderTransformer: "aws_eip.lb2" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-11-25T20:36:34.583+0530 [DEBUG] ProviderTransformer: "aws_eip.lb2 (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-11-25T20:36:34.583+0530 [DEBUG] ProviderTransformer: "aws_eip.lb" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-11-25T20:36:34.584+0530 [DEBUG] ReferenceTransformer: "output.public_ip2 (expand)" references: [aws_eip.lb2 aws_eip.lb2 aws_eip.lb2 (expand)]
+2023-11-25T20:36:34.584+0530 [DEBUG] ReferenceTransformer: "output.public_ip (expand)" references: [aws_eip.lb (expand) aws_eip.lb aws_eip.lb]
+2023-11-25T20:36:34.584+0530 [DEBUG] ReferenceTransformer: "aws_eip.lb2" references: []
+2023-11-25T20:36:34.584+0530 [DEBUG] ReferenceTransformer: "aws_eip.lb (expand)" references: []
+2023-11-25T20:36:34.584+0530 [DEBUG] ReferenceTransformer: "aws_security_group.mynewTLS (expand)" references: []
+2023-11-25T20:36:34.584+0530 [DEBUG] ReferenceTransformer: "aws_security_group.mynewTLS" references: [aws_eip.lb (expand) aws_eip.lb aws_eip.lb]
+2023-11-25T20:36:34.584+0530 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2023-11-25T20:36:34.584+0530 [DEBUG] ReferenceTransformer: "aws_eip.lb2 (expand)" references: []
+2023-11-25T20:36:34.584+0530 [DEBUG] ReferenceTransformer: "aws_eip.lb" references: []
+2023-11-25T20:36:34.587+0530 [INFO]  backend/local: plan operation completed
