@@ -1,0 +1,13 @@
+2023-11-25T22:12:10.108+0530 [INFO]  Terraform version: 1.5.5
+2023-11-25T22:12:10.109+0530 [DEBUG] using github.com/hashicorp/go-tfe v1.26.0
+2023-11-25T22:12:10.109+0530 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.2
+2023-11-25T22:12:10.109+0530 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.0
+2023-11-25T22:12:10.109+0530 [DEBUG] using github.com/zclconf/go-cty v1.12.2
+2023-11-25T22:12:10.109+0530 [INFO]  Go runtime version: go1.20.7
+2023-11-25T22:12:10.109+0530 [INFO]  CLI args: []string{"C:\\Program Files\\tmp\\terraform.exe", "fmt"}
+2023-11-25T22:12:10.117+0530 [DEBUG] Attempting to open CLI config file: C:\Users\Admin\AppData\Roaming\terraform.rc
+2023-11-25T22:12:10.117+0530 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-11-25T22:12:10.118+0530 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-11-25T22:12:10.118+0530 [DEBUG] ignoring non-existing provider search directory C:\Users\Admin\AppData\Roaming\terraform.d\plugins
+2023-11-25T22:12:10.121+0530 [DEBUG] ignoring non-existing provider search directory C:\Users\Admin\AppData\Roaming\HashiCorp\Terraform\plugins
+2023-11-25T22:12:10.121+0530 [INFO]  CLI command args: []string{"fmt"}
